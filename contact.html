@@ -75,7 +75,15 @@
     <!-- Contact Form Section -->
     <section id="callus" class="contact-form-section">
   <h2>Send Us a Message</h2>
-  <form id="contactForm" action="mailto:buti@titelo.co.za" method="post" enctype="text/plain" class="contact-form">
+
+  <!-- Contact form -->
+  <form id="contactForm"
+        action="mailto:buti@titelo.co.za"
+        method="post"
+        enctype="text/plain"
+        class="contact-form"
+        onsubmit="showEmailAlert()">
+
     <div class="form-row">
       <input type="text" id="name" name="name" placeholder="Full Name" required>
       <input type="email" id="email" name="email" placeholder="Email Address" required>
@@ -83,12 +91,12 @@
 
     <input type="text" id="subject" name="subject" placeholder="Subject">
     <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
-    
+
     <div class="buttons-call">
-      <!-- Email Option -->
+      <!-- Email button -->
       <button type="submit">Send Email</button>
 
-      <!-- WhatsApp Option -->
+      <!-- WhatsApp button -->
       <button type="button" onclick="sendToWhatsApp()">Send via WhatsApp</button>
     </div>
   </form>
