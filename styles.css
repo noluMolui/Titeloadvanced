@@ -13,8 +13,13 @@ body {
 
 
 a {
-  text-decoration: none;
+  text-decoration: solid;
   color: inherit;
+  cursor: pointer;
+}
+
+a :hover{
+    color: #e65a00;
 }
 
 img {
@@ -191,9 +196,11 @@ img {
 }
 
 .lp-btn-call:hover {
-    background-color: #f0f0f0;
+    background-color: #e65a00;
     transform: translateY(-2px);
 }
+
+
 
 /* SERVICES SECTION */
 .lp-services {
@@ -267,6 +274,23 @@ img {
 }
 
 
+.our-partners h3{
+    text-align: center;
+}
+.partners{
+    display: grid;
+    grid-template-columns: repeat( 2, 100px);
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+.p-image{
+    border: 1px solid rgb(236, 234, 234);
+  width: 100%;
+
+}
 
 
 
@@ -404,9 +428,10 @@ img {
 
 .footer-main {
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
-    padding: 50px 0;
+    padding: 20px 0 100px;
+    
 }
 
 .footer-logo {
@@ -505,6 +530,7 @@ img {
 .footer-detail {
     display: flex;
     gap: 50px;
+  
 }
 
 
@@ -512,6 +538,7 @@ img {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -637,8 +664,12 @@ main {
     border-color: #ff6f3c;
     box-shadow: 0 0 10px rgba(255,111,60,0.3);
 }
-
-.contact-form button {
+.buttons-call{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.contact-form button { 
     padding: 1rem;
     background-color: #ff6f3c;
     color: #fff;

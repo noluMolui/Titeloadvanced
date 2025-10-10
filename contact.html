@@ -36,12 +36,12 @@
         <p>Whether you have a project in mind, need emergency support, or want to discuss energy-efficient solutions, our team is here to help.</p>
         <div class="info-grid">
             <div class="info-box">
-                <h3>📩Email</h3>
-               <a href="mailto:buti@titelo.co.za"> <p>buti@titelo.co.za</p></a>
-                <a href="mailto:titeloelectrical@gmail.com">titeloelectrical@gmail.com</a>
+                <h3 id="mailus">📩Email</h3>
+               <a href="mailto:info@titelo.co.za"> <p>info@titelo.co.za</p></a>
+           
             </div>
-            <div class="info-box">
-                <h3>📞Phone</h3>
+            <div id="phoneus" class="info-box" >
+                <h3 >📞Phone</h3>
                 <a href="tel:+2710787741254"> +27 1078 774 1254</a>
                 <a href="tel:+27872653231."> 0872653231.</a>
                 <br>
@@ -74,17 +74,25 @@
 
     <!-- Contact Form Section -->
     <section id="callus" class="contact-form-section">
-        <h2>Send Us a Message</h2>
-        <form action="mailto:buti@titelo.co.za" method="post" enctype="text/plain" class="contact-form">
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <h2>Send Us a Message</h2>
+  <form id="contactForm" action="mailto:buti@titelo.co.za" method="post" enctype="text/plain" class="contact-form">
+    <div class="form-row">
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+    </div>
+
+    <input type="text" id="subject" name="subject" placeholder="Subject">
+    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+    
+    <div class="buttons-call">
+      <!-- Email Option -->
+      <button type="submit">Send Email</button>
+
+      <!-- WhatsApp Option -->
+      <button type="button" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+    </div>
+  </form>
+</section>
 </main>
 
 <footer>
