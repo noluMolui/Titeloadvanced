@@ -647,7 +647,7 @@ main {
     transition: all 0.3s ease;
 }
 
-
+.mals{ text-transform: lowercase;}
 
 .contact-form input:focus,
 .contact-form textarea:focus {
