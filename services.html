@@ -1,119 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services - Titelo Electrical Projects</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bruno+Ace+SC&family=Delius&family=Delius+Unicase:wght@400;700&family=Indie+Flower&family=Oldenburg&family=Playwrite+IN:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Smooch+Sans:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Titelo Electrical</title>
+  <meta name="description" content="Services provided by Titelo Electrical" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          colors: {
+            titelo: { 900: '#061226' },
+            accent: { DEFAULT: '#c28e3f' }
+          },
+          boxShadow: {
+            soft: '0 8px 24px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .reveal {opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
+    .reveal-visible{opacity:1;transform:none}
+  </style>
 </head>
-<body>
 
-<header class="navbar">
-    <div class="logo">
-        <img src="images/TItelologo.png" alt="Titelo Electrical Projects Logo">
-        <span>Titelo Electrical</span>
+<body class="antialiased bg-slate-50 text-slate-900 font-inter">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[rgba(6,18,38,0.95)] shadow-soft">
+    <div class="max-w-[1200px] mx-auto px-5 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/TItelologo.png" alt="Titelo" class="h-10 rounded-md">
+        <span class="text-white font-playfair text-lg font-semibold">Titelo Electrical</span>
+      </a>
+      <nav>
+        <ul id="nav-desktop" class="hidden md:flex items-center gap-6">
+          <li><a href="index.html" class="text-white hover:text-accent transition">Home</a></li>
+          <li><a href="about.html" class="text-white hover:text-accent transition">About</a></li>
+          <li><a href="services.html" class="text-accent font-semibold">Services</a></li>
+          <li><a href="index.html#contact" class="text-white hover:text-accent transition">Contact</a></li>
+        </ul>
+        <button id="mobile-toggle" aria-expanded="false" class="md:hidden p-2 rounded focus:ring-2 focus:ring-accent/40">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
     </div>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div id="mobile-menu" class="md:hidden hidden bg-[rgba(6,18,38,0.98)]">
+      <ul class="flex flex-col gap-3 p-4">
+        <li><a href="index.html" class="block text-white py-2 px-3 rounded hover:bg-accent/20">Home</a></li>
+        <li><a href="about.html" class="block text-white py-2 px-3 rounded hover:bg-accent/20">About</a></li>
+        <li><a href="services.html" class="block text-accent py-2 px-3 rounded">Services</a></li>
+        <li><a href="index.html#contact" class="block text-white py-2 px-3 rounded hover:bg-accent/20">Contact</a></li>
+      </ul>
     </div>
-</header>
+  </header>
 
-<main>
-    
-    <section class="services-section">
-        <h2>Our Services</h2>
+  <!-- Hero -->
+  <section class="relative">
+    <img src="images/titelo3.jpg" alt="Electrical services" class="w-full h-72 object-cover brightness-50">
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+      <h1 class="text-4xl md:text-5xl font-playfair font-semibold mb-3">Our Services</h1>
+      <p class="max-w-xl text-slate-200 text-lg">Powering spaces with precision, trust, and style.</p>
+    </div>
+  </section>
 
-        <div class="cards-grid">
-            <div id="residential" class="card">
-                <h3>Residential Services</h3>
-                <ul>
-                    <li>Electrical installations, repairs, and maintenance</li>
-                    <li>Customized lighting design and installation</li>
-                    <li>Smart home automation solutions</li>
-                    <li>Energy-efficient solutions</li>
-                    <li>Solar panel installation and maintenance</li>
-                    <li>Certificates of Compliance (COCs)</li>
-                </ul>
-            </div>
+  <main class="max-w-[1200px] mx-auto px-5 py-16 space-y-20">
 
-            <div id="commercial" class="card">
-                <h3>Commercial Services</h3>
-                <ul>
-                    <li>Electrical systems for offices, shops, and restaurants</li>
-                    <li>LED lighting solutions</li>
-                    <li>Electrical upgrades and repairs</li>
-                    <li>COC testing and certification</li>
-                    <li>Emergency electrical support</li>
-                </ul>
-            </div>
-
-            <div id="industrial" class="card">
-                <h3>Industrial Services</h3>
-                <ul>
-                    <li>Factory and warehouse electrical installations</li>
-                    <li>Machinery and equipment wiring</li>
-                    <li>Distribution board audits and load balancing</li>
-                    <li>Thermographic testing for preventative maintenance</li>
-                    <li>Generator connections and backup power solutions</li>
-                    <li>Alternative energy systems, including solar and energy storage</li>
-                </ul>
-            </div>
-        </div>
+    <!-- Residential -->
+    <section class="reveal bg-gradient-to-br from-slate-100 to-white p-8 md:p-12 rounded-2xl shadow-soft flex flex-col md:flex-row items-center gap-8">
+      <img src="images/titelo7.jpg" alt="Residential service" class="w-full md:w-1/2 rounded-xl object-cover h-72 transition-transform duration-500 hover:scale-105">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-playfair text-titelo-900 mb-3">Residential Services</h2>
+        <p class="text-slate-700 mb-3">We bring elegance and safety into your home with innovative electrical craftsmanship. From modern automation to smart lighting, we ensure your comfort is powered beautifully.</p>
+        <ul class="list-disc list-inside text-slate-600 space-y-1">
+          <li>Installations, repairs & maintenance</li>
+          <li>Smart home automation</li>
+          <li>Energy-efficient upgrades</li>
+          <li>Certificates of Compliance (COCs)</li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Commercial -->
+    <section class="reveal bg-gradient-to-tr from-[#0C1F46]/5 via-slate-100 to-white p-8 md:p-12 rounded-2xl shadow-soft flex flex-col md:flex-row-reverse items-center gap-8">
+      <img src="images/titelo2.jpg" alt="Commercial service" class="w-full md:w-1/2 rounded-xl object-cover h-72 transition-transform duration-500 hover:scale-105">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-playfair text-titelo-900 mb-3">Commercial Services</h2>
+        <p class="text-slate-700 mb-3">Efficiency and reliability drive your business — our team ensures seamless electrical systems that enhance safety, performance, and design appeal.</p>
+        <ul class="list-disc list-inside text-slate-600 space-y-1">
+          <li>LED retrofits & lighting controls</li>
+          <li>COC testing & certification</li>
+          <li>Emergency electrical support</li>
+          <li>Complete building wiring solutions</li>
+        </ul>
+      </div>
+    </section>
 
-<section class="services-gallery">
-    
+    <!-- Industrial -->
+    <section class="reveal bg-gradient-to-br from-slate-100 to-[#fefefe] p-8 md:p-12 rounded-2xl shadow-soft flex flex-col md:flex-row items-center gap-8">
+      <img src="images/about2.jpg" alt="Industrial service" class="w-full md:w-1/2 rounded-xl object-cover h-72 transition-transform duration-500 hover:scale-105">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-playfair text-titelo-900 mb-3">Industrial Services</h2>
+        <p class="text-slate-700 mb-3">For factories and industrial facilities, we deliver robust and scalable power solutions with zero compromise on safety or performance.</p>
+        <ul class="list-disc list-inside text-slate-600 space-y-1">
+          <li>Machinery wiring & audits</li>
+          <li>Generator & backup power solutions</li>
+          <li>Thermographic preventative testing</li>
+          <li>Energy monitoring & automation</li>
+        </ul>
+      </div>
+    </section>
 
-    <div class="instagram-grid">
-        <!-- Left Side Images -->
-        <div class="instagram-side left">
-            <div class="serviceimage"><img src="images/titelo1st.jpg" alt="Instagram 1"></div>
-            <div class="serviceimage"><img src="images/titelo2.jpg" alt="Instagram 2"></div>
-            <div class="serviceimage"><img src="images/titelo5.jpg" alt="Instagram 3"></div>
-            <div class="serviceimage"><img src="images/titelo3.jpg" alt="Instagram 4"></div>
-        </div>
+    <!-- Gallery -->
+    <section class="reveal text-center">
+      <h2 class="font-playfair text-2xl text-titelo-900 mb-6">Our Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="images/titelo1st.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+        <img src="images/about1.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+        <img src="images/titelo6.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+        <img src="images/titelo4.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+      <img src="images/titelo9.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+      <img src="images/titelo5.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+      <img src="images/titelo2.jpg" alt="work" class="rounded-lg object-cover h-40 w-full shadow-soft hover:scale-105 transition-transform">
+      
+      
+      </div>
+    </section>
+  </main>
 
-        <!-- Center Paragraph -->
-        <div class="instagram-center">
-            <p>
-                At <strong>Titelo Electrical Projects (Pty) Ltd</strong>, We pride ourselves on combining cutting-edge technology with environmentally friendly practices, ensuring our clients enjoy safe, reliable, and sustainable electrical solutions.
-                <br><br>
-                <em>Follow our work, see our impact, and stay connected with our journey.</em>
-            </p>
-        </div>
-
-        <!-- Right Side Images -->
-        <div class="instagram-side right">
-            <div class="serviceimage"><img src="images/titelo9.jpg" alt="Instagram 5"></div>
-            <div class="serviceimage"><img src="images/titelo7.jpg" alt="Instagram 6"></div>
-            <div class="serviceimage"><img src="images/titelo6.jpg" alt="Instagram 7"></div>
-            <div class="serviceimage"><img src="images/titelo4.jpg" alt="Instagram 8"></div>
-        </div>
+  <!-- Footer -->
+  <footer class="bg-[#0C1F46] text-white text-center py-10">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="#" class="text-[#C89B3C] hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 2.25h9A5.25 5.25 0 0 1 21.75 7.5v9a5.25 5.25 0 0 1-5.25 5.25h-9A5.25 5.25 0 0 1 2.25 16.5v-9A5.25 5.25 0 0 1 7.5 2.25z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0z" />
+          <circle cx="17.25" cy="6.75" r=".75" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" class="text-[#C89B3C] hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" rx="1" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      </a>
+      <a href="#" class="text-[#C89B3C] hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 8h3V5a3 3 0 0 1 3-3h3v4h-3v3h3l-1 4h-2v9h-4v-9H9V8z" />
+        </svg>
+      </a>
     </div>
-</section>
+    <p class="text-sm">&copy; <span id="year"></span> Titelo Electrical. All rights reserved.</p>
+  </footer>
 
-
-
-
-
-</main>
-
-<footer>
-    <p>&copy; 2025 Titelo Electrical Projects (Pty) Ltd. All rights reserved.</p>
-</footer>
-<script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
 
