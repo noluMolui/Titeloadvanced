@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Titelo Electrical</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/font/css/flaticon.css">
+
   <style>
     html { scroll-behavior: smooth; }
     .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
@@ -34,17 +36,35 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative h-screen flex items-center justify-center text-center bg-[url('https://images.unsplash.com/photo-1581092334846-4c92f8d23f55?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center ">
-    <div class="absolute inset-0 bg-[#0C1F46]/80"></div>
-    <div class="relative z-8 text-white px-6 max-w-2xl">
-      <h2 class="text-4xl md:text-6xl font-bold  leading-tight">Licensed Electrician <br>you can trust</h2>
-      <p class="text-lg md:text-xl mb-8 text-gray-200">Expert electrical services for homes, offices, and industries — delivered safely and efficiently.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#services" class="bg-[#C89B3C] hover:bg-[#b98b33] text-white px-6 py-3 rounded-lg font-semibold transition">Our Services</a>
-        <a href="#contact" class="bg-white text-[#0C1F46] hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition">Get a Quote</a>
-      </div>
+  <section class="relative h-screen flex items-center justify-center text-center">
+  <!-- Background Image -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center filter brightness-40 blur-sm"
+    style="background-image: url('./images/image.png');"
+  ></div>
+
+  <!-- Dark Overlay -->
+
+
+  <!-- Content -->
+  <div class="relative z-10 text-white px-6 max-w-2xl">
+    <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+      Licensed Electrician <br>you can trust
+    </h2>
+    <p class="text-lg md:text-xl mb-8 text-gray-200">
+      <strong>Expert electrical services for homes, offices, and industries — delivered safely and efficiently.
+    </strong></p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#services" class="bg-[#C89B3C] hover:bg-[#b98b33] text-white px-6 py-3 rounded-lg font-semibold transition">
+        Our Services
+      </a>
+      <a href="#contact" class="bg-white text-[#0C1F46] hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition">
+        Get a Quote
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- About -->
   <section id="about" class="py-24 px-6 bg-white fade-in">
@@ -65,21 +85,24 @@
   <section id="services" class="py-24 px-6 bg-gray-50 fade-in">
     <div class="max-w-6xl mx-auto text-center mb-12">
       <h3 class="text-3xl font-bold text-[#0C1F46] mb-4">Our Services</h3>
-      <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive electrical services tailored to meet your needs — from installation to maintenance.</p>
+      <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive electrical services tailored to meet your needs, from installation to maintenance.</p>
     </div>
     <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition">
-        <div class="text-[#C89B3C] text-4xl mb-4">⚡</div>
+        <div class="text-[#C89B3C] text-4xl mb-4"><img src="images/light-bulb.png" alt="" class="w-10 h-10"></div>
         <h4 class="font-semibold text-lg mb-2 text-[#0C1F46]">Residential Wiring</h4>
         <p class="text-gray-600">Safe and efficient home electrical wiring, lighting, and upgrades.</p>
       </div>
       <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition">
-        <div class="text-[#C89B3C] text-4xl mb-4">🏢</div>
+        <div class="text-[#C89B3C] text-4xl mb-4">
+  <img src="images/eco-house.png" alt="commercial-image" class="h-10 w-10">
+</div>
+
         <h4 class="font-semibold text-lg mb-2 text-[#0C1F46]">Commercial Projects</h4>
         <p class="text-gray-600">Reliable installations for offices, retail, and public buildings.</p>
       </div>
       <div class="bg-white rounded-xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition">
-        <div class="text-[#C89B3C] text-4xl mb-4">🔌</div>
+        <div class="text-[#C89B3C] text-4xl mb-4"><img src="images/electric-factory.png" alt="industrialial-mage" class="h-10 w-10"></div>
         <h4 class="font-semibold text-lg mb-2 text-[#0C1F46]">Industrial Power</h4>
         <p class="text-gray-600">High-capacity solutions for factories, plants, and energy systems.</p>
       </div>
@@ -239,39 +262,57 @@
     </div>
 
     <!-- RIGHT COLUMN: FORM -->
-    <form class="bg-white shadow-lg rounded-xl p-8 space-y-4">
-      <input 
-        type="text" 
-        placeholder="Your Name" 
-        class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
-        required>
+   <form class="bg-white shadow-lg rounded-xl p-8 space-y-4">
+  <input 
+    type="text" 
+    placeholder="Your Name" 
+    class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
+    required
+  >
+  
+  <input 
+    type="email" 
+    placeholder="Your Email" 
+    class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
+    required
+  >
 
-      <input 
-        type="email" 
-        placeholder="Your Email" 
-        class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
-        required>
+  <!-- Dropdown -->
+  <select 
+    class="w-full border border-gray-300 rounded-md p-3 bg-white focus:outline-none focus:border-[#C89B3C]" 
+    required
+  >
+    <option value="">Select Service Type</option>
+    <option value="residential">Residential</option>
+    <option value="commercial">Commercial</option>
+    <option value="industrial">Industrial</option>
+  </select>
 
-      <textarea 
-        placeholder="Your Message" 
-        rows="4" 
-        class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
-        required>
-      </textarea>
+  <textarea 
+    placeholder="Your Message" 
+    rows="4" 
+    class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[#C89B3C]" 
+    required
+  ></textarea>
 
-      <!-- BUTTONS UNDER THE FORM -->
-      <div class="flex flex-wrap justify-center gap-4 pt-4">
-        <a href="mailto:info@titelo.co.za" 
-           class="bg-[#0C1F46] text-white px-6 py-3 rounded-md hover:bg-[#0e285a] transition font-semibold text-center w-full sm:w-auto">
-          Email Us
-        </a>
+  <!-- Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 pt-4">
+    <a 
+      href="mailto:info@titelo.co.za" 
+      class="bg-[#0C1F46] text-white px-6 py-3 rounded-md hover:bg-[#0e285a] transition font-semibold text-center"
+    >
+      <strong>Email Us</strong>
+    </a>
+    <a 
+      href="https://wa.me/27872653231" 
+      target="_blank" 
+      class="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition font-semibold text-center"
+    >
+      <strong>WhatsApp Us</strong>
+    </a>
+  </div>
+</form>
 
-        <a href="https://wa.me/27872653231" target="_blank" 
-           class="bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 transition font-semibold text-center w-full sm:w-auto">
-          WhatsApp Us
-        </a>
-      </div>
-    </form>
   </div>
 </section>
 
